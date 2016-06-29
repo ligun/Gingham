@@ -6,5 +6,6 @@ class Page {
 
     static constraints = {
         title blank: false
+        markdown type: 'text'
     }
 }
