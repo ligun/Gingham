@@ -1,6 +1,8 @@
 package gingham
 import io.github.gitbucket.markedj.*
+import grails.plugin.springsecurity.annotation.Secured
 
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
 class PageController {
     def index() {
         [pageList: Page.list()]
