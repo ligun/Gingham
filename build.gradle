@@ -54,6 +54,8 @@ dependencies {
     compile "org.hibernate:hibernate-ehcache"
     compile "io.github.gitbucket:markedj:1.0.8"
     compile "org.grails.plugins:spring-security-core:3.1.1"
+    compile "commons-codec:commons-codec:1.10"
+    compile 'org.webjars.bower:font-awesome:4.6.3'
     console "org.grails:grails-console"
     profile "org.grails.profiles:web:3.1.8"
     runtime "com.bertramlabs.plugins:asset-pipeline-grails:2.8.2"

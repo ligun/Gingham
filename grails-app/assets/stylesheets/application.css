@@ -15,6 +15,7 @@
 *= require github-markdown
 *= require webjars/bootstrap/3.3.5/dist/css/bootstrap
 *= require webjars/bootstrap-select/1.7.4/dist/css/bootstrap-select
+*= require webjars/font-awesome/4.6.3/css/font-awesome.min.css
 */
 
 .show-main {
