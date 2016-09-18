@@ -23,5 +23,10 @@
         <h2>Picture list</h2>
         <g:link class="btn btn-primary" controller="Picture" action="list">list</g:link>
     </div>
+
+    <div>
+        <h2>User list</h2>
+        <g:link class="btn btn-primary" controller="User" action="list">list</g:link>
+    </div>
     </body>
 </html>

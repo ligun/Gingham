@@ -33,7 +33,9 @@ int main(void) {
                 new Page(title: "Hello world", markdown: md).save()
 
                 def user = new User(username: "gingham", password: "gingham").save()
-                def adminRole = new Role(authority: "ROLE_ADMIN").save()
+                def adminRole = new Role(name: "管理者",authority: "ROLE_ADMIN").save()
+
+                new Role(name: "一般",authority: "ROLE_USER").save()
 
                 if(!user.authorities.contains(adminRole)) {
                     UserRole.create(user, adminRole)

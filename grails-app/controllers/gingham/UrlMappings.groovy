@@ -9,7 +9,7 @@ class UrlMappings {
             }
         }
 
-        "/"(view:"/index")
+        "/"(controller: "page", action: "index")
         "/picture/download/$fileName"(controller: "picture", action: "download")
         "/picture/delete/$fileName"(controller: "picture", action: "delete")
         "500"(view:'/error')

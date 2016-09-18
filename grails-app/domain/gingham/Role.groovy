@@ -9,9 +9,11 @@ class Role implements Serializable {
 
 	private static final long serialVersionUID = 1
 
+	String name
 	String authority
 
 	static constraints = {
+		name blank: false, unique: true
 		authority blank: false, unique: true
 	}
 
