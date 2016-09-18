@@ -26,11 +26,25 @@
                 </button>
                 <a class="navbar-brand" href="/#">Gingham</a>
             </div>
-            <div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
-                <ul class="nav navbar-nav navbar-right">
-                    <g:pageProperty name="page.nav" />
-                </ul>
-            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <sec:ifLoggedIn>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            menu<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><g:link controller="user" action="list">ユーザー管理</g:link></li>
+                            <li><g:link controller="picture" action="list">画像管理</g:link></li>
+                        </ul>
+                    </li>
+                    <li><g:link controller="logout">ログアウト</g:link></li>
+                </sec:ifLoggedIn>
+
+                <sec:ifNotLoggedIn>
+                    <li><g:link controller="login">ログイン</g:link></li>
+                </sec:ifNotLoggedIn>
+            </ul>
         </div>
     </div>
 
