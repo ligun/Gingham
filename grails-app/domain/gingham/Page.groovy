@@ -1,6 +1,7 @@
 package gingham
 
 class Page {
+    User author
     String title
     String markdown
 

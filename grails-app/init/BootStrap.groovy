@@ -30,8 +30,6 @@ int main(void) {
 }
 ```
 """
-                new Page(title: "Hello world", markdown: md).save()
-
                 def user = new User(username: "gingham", password: "gingham").save()
                 def adminRole = new Role(name: "管理者",authority: "ROLE_ADMIN").save()
 
@@ -40,6 +38,8 @@ int main(void) {
                 if(!user.authorities.contains(adminRole)) {
                     UserRole.create(user, adminRole)
                 }
+                new Page(author: user, title: "Hello world", markdown: md).save()
+
 
             }
         }
