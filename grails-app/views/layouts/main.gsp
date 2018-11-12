@@ -15,7 +15,7 @@
 </head>
 <body>
 
-    <div class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
+    <div id="header" class="navbar navbar-inverse navbar-static-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -24,7 +24,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/#">Gingham</a>
+                <a class="navbar-brand header-text" href="/#">Gingham</a>
             </div>
 
             <ul class="nav navbar-nav navbar-right">
@@ -36,9 +36,9 @@
                         <ul class="dropdown-menu">
                             <li><g:link controller="user" action="list">ユーザー管理</g:link></li>
                             <li><g:link controller="picture" action="list">画像管理</g:link></li>
+                            <li><g:link controller="logout">ログアウト</g:link></li>
                         </ul>
                     </li>
-                    <li><g:link controller="logout">ログアウト</g:link></li>
                 </sec:ifLoggedIn>
 
                 <sec:ifNotLoggedIn>
