@@ -32,4 +32,11 @@ class UserController {
 
         [userList: userList]
     }
+
+    @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
+    def show(String username) {
+        def user = User.findByUsername(username)
+        def pageList = Page.findAllByAuthor(user)
+        [user: user, pageList: pageList]
+    }
 }

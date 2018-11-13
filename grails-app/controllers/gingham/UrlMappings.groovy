@@ -10,6 +10,7 @@ class UrlMappings {
         }
 
         "/"(controller: "page", action: "index")
+        "/user/show/$username"(controller: "user", action: "show")
         "/picture/download/$fileName"(controller: "picture", action: "download")
         "/picture/delete/$fileName"(controller: "picture", action: "delete")
         "500"(view:'/error')
