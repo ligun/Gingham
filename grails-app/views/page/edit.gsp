@@ -18,6 +18,7 @@
                     <textarea id="markdown-input" class="form-control" name="markdown" rows="30" placeholder="本文">${page?.markdown}</textarea>
                     <g:if test="${page}"><input type="hidden" name="id" value="${page.id}" /> </g:if>
                 </div>
+                <button class="btn btn-primary" type="submit">send</button>
             </div>
 
             <div class="col-md-6">
@@ -26,7 +27,6 @@
             </div>
             </div>
         </div>
-        <button class="btn btn-primary" type="submit">send</button>
     </g:form>
     <asset:javascript src="webjars/marked-mathjax/0.3.6/marked.min.js"/>
     <script type="text/javascript">

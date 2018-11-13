@@ -7,10 +7,6 @@
     </head>
     <body>
     <div>
-        <g:link class="btn btn-primary" action="edit">new</g:link>
-    </div>
-
-    <div>
         <h2>List</h2>
         <ul class="list-group">
             <g:each var="page" in="${pageList}">

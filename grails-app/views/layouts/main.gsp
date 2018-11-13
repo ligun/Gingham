@@ -29,13 +29,19 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <sec:ifLoggedIn>
+                    <g:set var="auth" bean="springSecurityService"/>
+                    <li><button class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-file"></span>Create page</button></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-cog"></span>
                             menu<span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><g:link controller="user" action="list">ユーザー管理</g:link></li>
+                            <li><g:link controller="user" action="show" id="${auth.currentUser.username}">マイページ</g:link></li>
                             <li><g:link controller="picture" action="list">画像管理</g:link></li>
+                            <sec:ifAllGranted roles="ROLE_ADMIN">
+                                <li><g:link controller="user" action="list">ユーザー管理</g:link></li>
+                            </sec:ifAllGranted>
                             <li><g:link controller="logout">ログアウト</g:link></li>
                         </ul>
                     </li>
@@ -48,7 +54,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div id="main" class="container">
         <g:layoutBody/>
     </div>
 </body>
