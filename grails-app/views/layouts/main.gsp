@@ -30,11 +30,11 @@
             <ul class="nav navbar-nav navbar-right">
                 <sec:ifLoggedIn>
                     <g:set var="auth" bean="springSecurityService"/>
-                    <li><button class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-file"></span>Create page</button></li>
+                    <li><button class="btn btn-default navbar-btn" onclick="location.href='<g:createLink controller="page" action="edit"/>'"><span class="glyphicon glyphicon-file"></span>Create page</button></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <span class="glyphicon glyphicon-cog"></span>
-                            menu<span class="caret"></span>
+                            <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
                             <li><g:link controller="user" action="show" id="${auth.currentUser.username}">マイページ</g:link></li>
